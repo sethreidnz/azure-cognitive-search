@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "3f5e4ba6-486d-4c96-be46-1e305394adef",
+		"name": "Youtube Channel Cognitive Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "YouTube - Get Channel Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCzQUP1qoWDoEbmsQxvdjxgQ&maxResults=50&key={{YoutubeKey}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"search"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "channelId",
+							"value": "UCzQUP1qoWDoEbmsQxvdjxgQ"
+						},
+						{
+							"key": "maxResults",
+							"value": "50"
+						},
+						{
+							"key": "key",
+							"value": "{{YoutubeKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YouTube - Get Playlist Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,snippet&playlistId=PLk1Sqn_f33KvXucAFMo5Tc5p8e_mcc-5g&maxResults=50&key={{YoutubeKey}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"playlistItems"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "contentDetails,snippet"
+						},
+						{
+							"key": "playlistId",
+							"value": "PLk1Sqn_f33KvXucAFMo5Tc5p8e_mcc-5g"
+						},
+						{
+							"key": "maxResults",
+							"value": "50"
+						},
+						{
+							"key": "key",
+							"value": "{{YoutubeKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YouTube - Get Video",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos?key={{YoutubeKey}}&part=snippet%2CcontentDetails%2Cstatistics&id=BEWz4SXfyCQ,eIho2S0ZahI",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{YoutubeKey}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet%2CcontentDetails%2Cstatistics"
+						},
+						{
+							"key": "id",
+							"value": "BEWz4SXfyCQ,eIho2S0ZahI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YouTube - Get Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=68azjW5Hhok%2C7Dtv8ibI1vk&maxResults=50&key={{YoutubeKey}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "snippet%2CcontentDetails%2Cstatistics"
+						},
+						{
+							"key": "id",
+							"value": "68azjW5Hhok%2C7Dtv8ibI1vk"
+						},
+						{
+							"key": "maxResults",
+							"value": "50"
+						},
+						{
+							"key": "key",
+							"value": "{{YoutubeKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YouTube - Request 50 Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4wMTcyMDhGQUE4NTIzM0Y5,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yODlGNEE0NkRGMEEzMEQy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MjE1MkI0OTQ2QzJGNzNG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4wOTA3OTZBNzVEMTUzOTMy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4xMkVGQjNCMUM1N0RFNEUx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MzJCQjBCNDIyRkJDN0VD,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DQUNERDQ2NkIzRUQxNTY1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NDk1REZENzhEMzU5MDQz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41NkI0NEY2RDEwNTU3Q0M2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GNjNDRDREMDQxOThCMDQ2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40NzZCMERDMjVEN0RFRThB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5EMEEwRUY5M0RDRTU3NDJC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45ODRDNTg0QjA4NkFBNkQy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zMDg5MkQ5MEVDMEM1NTg2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41Mzk2QTAxMTkzNDk4MDhF,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5EQUE1NTFDRjcwMDg0NEMz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41QTY1Q0UxMTVCODczNThE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yMUQyQTQzMjRDNzMyQTMy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45RTgxNDRBMzUwRjQ0MDhC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5ENDU4Q0M4RDExNzM1Mjcy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yMDhBMkNBNjRDMjQxQTg1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GM0Q3M0MzMzY5NTJFNTdE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zRjM0MkVCRTg0MkYyQTM0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NzUwQkI1M0UxNThBMkU0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DNzE1RjZEMUZCMjA0RDBB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy43MTI1NDIwOTMwQjIxMzNG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DQ0MyQ0Y4Mzg0M0VGOEYw,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQUE2Q0JEMTk4NTM3RTZC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DMkU4NTY1QUFGQTYwMDE3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy44Mjc5REFBRUE2MTdFRDU0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy43NDhFRTgwOTRERTU4Rjg3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41QUZGQTY5OTE4QTREQUU4,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zRDBDOEZDOUM0MDY5NEEz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5CMEQ2Mjk5NTc3NDZFRUNB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy42MTI4Njc2QjM1RjU1MjlG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45RjNFMDhGQ0Q2RkFCQTc1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40QTA3NTU2RkM1QzlCMzYx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5BRjJDODk5REM0NjkzMUIy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4xOTEzQzhBQzU3MDNDNjcz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GNDg1Njc1QzZERjlFRjE5,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zQzFBN0RGNzNFREFCMjBE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NkVENTkxRDdCQUFBMDY4,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DNkMwRUI2MkI4QkI4NDFG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DRUQwODMxQzUyRTlGRkY3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MzY4MzcwOUFFRUU3QzEx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQjZFRkExQjFGODk3RUFD,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQUJFNUVCMzVDNjcxRTlF,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40QzRDOEU0QUYwNUIxN0M1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41RTNBREYwMkI5QzU3RkY2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5ENjI1QUI0MDI5NEQzODFE&maxResults=50&key=AIzaSyAdV-TwUoaTKb0OFU8HVw7eMuvPpVW-6HI\n",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "snippet,contentDetails"
+						},
+						{
+							"key": "id",
+							"value": "UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4wMTcyMDhGQUE4NTIzM0Y5,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yODlGNEE0NkRGMEEzMEQy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MjE1MkI0OTQ2QzJGNzNG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4wOTA3OTZBNzVEMTUzOTMy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4xMkVGQjNCMUM1N0RFNEUx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MzJCQjBCNDIyRkJDN0VD,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DQUNERDQ2NkIzRUQxNTY1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NDk1REZENzhEMzU5MDQz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41NkI0NEY2RDEwNTU3Q0M2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GNjNDRDREMDQxOThCMDQ2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40NzZCMERDMjVEN0RFRThB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5EMEEwRUY5M0RDRTU3NDJC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45ODRDNTg0QjA4NkFBNkQy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zMDg5MkQ5MEVDMEM1NTg2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41Mzk2QTAxMTkzNDk4MDhF,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5EQUE1NTFDRjcwMDg0NEMz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41QTY1Q0UxMTVCODczNThE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yMUQyQTQzMjRDNzMyQTMy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45RTgxNDRBMzUwRjQ0MDhC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5ENDU4Q0M4RDExNzM1Mjcy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yMDhBMkNBNjRDMjQxQTg1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GM0Q3M0MzMzY5NTJFNTdE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zRjM0MkVCRTg0MkYyQTM0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NzUwQkI1M0UxNThBMkU0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DNzE1RjZEMUZCMjA0RDBB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy43MTI1NDIwOTMwQjIxMzNG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DQ0MyQ0Y4Mzg0M0VGOEYw,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQUE2Q0JEMTk4NTM3RTZC,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DMkU4NTY1QUFGQTYwMDE3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy44Mjc5REFBRUE2MTdFRDU0,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy43NDhFRTgwOTRERTU4Rjg3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41QUZGQTY5OTE4QTREQUU4,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zRDBDOEZDOUM0MDY5NEEz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5CMEQ2Mjk5NTc3NDZFRUNB,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy42MTI4Njc2QjM1RjU1MjlG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45RjNFMDhGQ0Q2RkFCQTc1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40QTA3NTU2RkM1QzlCMzYx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5BRjJDODk5REM0NjkzMUIy,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4xOTEzQzhBQzU3MDNDNjcz,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5GNDg1Njc1QzZERjlFRjE5,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4zQzFBN0RGNzNFREFCMjBE,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy45NkVENTkxRDdCQUFBMDY4,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DNkMwRUI2MkI4QkI4NDFG,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5DRUQwODMxQzUyRTlGRkY3,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41MzY4MzcwOUFFRUU3QzEx,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQjZFRkExQjFGODk3RUFD,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy4yQUJFNUVCMzVDNjcxRTlF,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy40QzRDOEU0QUYwNUIxN0M1,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy41RTNBREYwMkI5QzU3RkY2,UExrMVNxbl9mMzNLdlh1Y0FGTW81VGM1cDhlX21jYy01Zy5ENjI1QUI0MDI5NEQzODFE"
+						},
+						{
+							"key": "maxResults",
+							"value": "50"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyAdV-TwUoaTKb0OFU8HVw7eMuvPpVW-6HI\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Get Indexes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "{{AzureSearchKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://cognitive-search-demo.search.windows.net/indexes?api-version=2019-05-06&=",
+					"protocol": "https",
+					"host": [
+						"cognitive-search-demo",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Create Index",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{IndexName}}\",\n    \"fields\": [\n        {\n            \"name\": \"key\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": true,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"id\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"snippet\",\n            \"type\": \"Edm.ComplexType\",\n            \"fields\": [\n                {\n                    \"name\": \"title\",\n                    \"type\": \"Edm.String\",\n                    \"filterable\": false,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"searchable\": true\n                },\n                {\n                    \"name\": \"description\",\n                    \"type\": \"Edm.String\",\n                    \"filterable\": false,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"searchable\": true\n                },\n\t\t        {\n\t\t            \"name\": \"tags\",\n\t\t            \"type\": \"Collection(Edm.String)\",\n\t\t            \"searchable\": true,\n\t\t            \"filterable\": true,\n\t\t            \"retrievable\": true,\n\t\t            \"sortable\": false,\n\t\t            \"facetable\": true,\n\t\t            \"key\": false,\n\t\t            \"indexAnalyzer\": null,\n\t\t            \"searchAnalyzer\": null,\n\t\t            \"analyzer\": null,\n\t\t            \"synonymMaps\": []\n\t\t        }\n            ]\n        },\n        {\n            \"name\": \"metadata_storage_name\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": false,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"metadata_storage_path\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"people\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"organizations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"locations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"keyphrases\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"entities\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"standard.lucene\",\n            \"synonymMaps\": []\n        }\n    ],\n    \"scoringProfiles\": [],\n    \"defaultScoringProfile\": \"\",\n    \"suggesters\": [],\n    \"analyzers\": [],\n    \"tokenizers\": [],\n    \"tokenFilters\": [],\n    \"charFilters\": [],\n    \"corsOptions\": {\n        \"allowedOrigins\": [\n            \"*\"\n        ]\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/indexes/{{IndexName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Delete Index",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/indexes/{{IndexName}}?=&api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Create Datasource",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"{{DataSourceName}}\",\n    \"description\": \"The data source for he Youtube Channel Video Search\",\n    \"type\": \"azureblob\",\n    \"credentials\": {\n        \"connectionString\": \"{{AzureStorageConnectionString}}\"\n    },\n    \"container\": {\n        \"name\": \"{{AzureStorageContainerName}}\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/datasources/{{DataSourceName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"datasources",
+						"{{DataSourceName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Delete Datasource",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/datasources/{{DataSourceName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"datasources",
+						"{{DataSourceName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Create Skillset",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{SkillsetName}}\",\n    \"description\": \"The skillset for the indexer used in the Youtube Channel Video Search\",\n    \"skills\": [\n        {\n            \"@odata.type\": \"#Microsoft.Skills.Text.KeyPhraseExtractionSkill\",\n            \"defaultLanguageCode\": \"en\",\n            \"context\": \"/document\",\n            \"inputs\": [\n                {\n                    \"name\": \"text\",\n                    \"source\": \"/document/snippet/description\"\n                }\n            ],\n            \"outputs\": [\n                {\n                    \"name\": \"keyPhrases\",\n                    \"targetName\": \"keyPhrases\"\n                }\n            ]\n        },\n        {\n            \"@odata.type\": \"#Microsoft.Skills.Text.EntityRecognitionSkill\",\n            \"defaultLanguageCode\": \"en\",\n            \"context\": \"/document\",\n            \"categories\": [\n                \"Person\",\n                \"Location\",\n                \"Organization\"\n            ],\n            \"inputs\": [\n                {\n                    \"name\": \"text\",\n                    \"source\": \"/document/snippet/description\"\n                }\n            ],\n            \"outputs\": [\n                {\n                    \"name\": \"persons\",\n                    \"targetName\": \"persons\"\n                },\n                {\n                    \"name\": \"locations\",\n                    \"targetName\": \"locations\"\n                },\n                {\n                    \"name\": \"organizations\",\n                    \"targetName\": \"organizations\"\n                },\n                {\n                    \"name\": \"entities\",\n                    \"targetName\": \"entities\"\n                }\n            ]\n        }\n    ],\n    \"cognitiveServices\": {\n        \"@odata.type\": \"#Microsoft.Azure.Search.CognitiveServicesByKey\",\n        \"key\": \"{{CognitiveServicesKey}}\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/skillsets/{{SkillsetName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"skillsets",
+						"{{SkillsetName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Delete Skillset",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"{{SkillsetName}}\",\n    \"description\": \"The skillset for the indexer used in the Youtube Channel Video Search\",\n    \"skills\": [\n        {\n            \"@odata.type\": \"#Microsoft.Skills.Text.KeyPhraseExtractionSkill\",\n            \"inputs\": [\n                {\n                    \"name\": \"text\",\n                    \"source\": \"/document/snippet/description\"\n                }\n            ],\n            \"outputs\": [\n                {\n                    \"name\": \"keyPhrases\",\n                    \"targetName\": \"myKeyPhrases\"\n                }\n            ]\n        },\n        {\n            \"@odata.type\": \"#Microsoft.Skills.Text.EntityRecognitionSkill\",\n            \"context\": \"/document\",\n            \"categories\": [\n                \"Person\",\n                \"Location\",\n                \"Organization\"\n            ],\n            \"defaultLanguageCode\": \"en\",\n            \"inputs\": [\n                {\n                    \"name\": \"text\",\n                    \"source\": \"/document/snippet/description\"\n                }\n            ],\n            \"outputs\": [\n                {\n                    \"name\": \"persons\",\n                    \"targetName\": \"persons\"\n                },\n                {\n                    \"name\": \"locations\",\n                    \"targetName\": \"locations\"\n                },\n                {\n                    \"name\": \"organizations\",\n                    \"targetName\": \"organizations\"\n                }\n            ]\n        }\n    ],\n    \"cognitiveServices\": {\n        \"@odata.type\": \"#Microsoft.Azure.Search.CognitiveServicesByKey\",\n        \"key\": \"{{CognitiveServicesKey}}\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/skillsets/{{SkillsetName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"skillsets",
+						"{{SkillsetName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Create Indexer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{IndexerName}}\",\n    \"description\": \"a cool indexer\",\n    \"dataSourceName\": \"{{DataSourceName}}\",\n    \"targetIndexName\": \"{{IndexName}}\",\n    \"skillsetName\":\"{{SkillsetName}}\",\n    \"parameters\": {\n        \"configuration\": {\n            \"parsingMode\": \"jsonArray\"\n        }\n    },\n    \"outputFieldMappings\": [\n        {\n            \"sourceFieldName\": \"/document/organizations\",\n            \"targetFieldName\": \"organizations\",\n            \"mappingFunction\": null\n        },\n        {\n            \"sourceFieldName\": \"/document/locations\",\n            \"targetFieldName\": \"locations\",\n            \"mappingFunction\": null\n        },\n        {\n            \"sourceFieldName\": \"/document/keyPhrases\",\n            \"targetFieldName\": \"keyphrases\",\n            \"mappingFunction\": null\n        },\n        {\n            \"sourceFieldName\": \"/document/entities\",\n            \"targetFieldName\": \"entities\",\n            \"mappingFunction\": null\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/indexers/youtube-channel-videos?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexers",
+						"youtube-channel-videos"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Delete Indexer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/indexers/{{IndexerName}}?api-version={{AzureSearchApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexers",
+						"{{IndexerName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Azure Search - Search Documents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{AzureSearchKey}}"
+					}
+				],
+				"url": {
+					"raw": "https://{{AzureSearchServiceName}}.search.windows.net/indexes/{{IndexName}}/docs?api-version={{AzureSearchApiVersion}}&search=jordan peterson",
+					"protocol": "https",
+					"host": [
+						"{{AzureSearchServiceName}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{AzureSearchApiVersion}}"
+						},
+						{
+							"key": "search",
+							"value": "jordan peterson"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

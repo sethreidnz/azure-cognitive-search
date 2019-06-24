@@ -1,0 +1,16 @@
+{
+  "name": "youtube-data-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^10.3.0",
+    "dotenv": "^8.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.0"
+  }
+}

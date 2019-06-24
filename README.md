@@ -1,4 +1,4 @@
-# Azure Cognitive Search Demo
+# Youtube Cognitive Search
 
 This repository contains the source code for the YouTube scrapping Azure Search based Youtube Cognitive Search application. This was created as a demo for presenting the capabilities of [Cognitive Search](https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro) by giving your a full faceted seach experience over Joe Rogans YouTube podcasts.
 
